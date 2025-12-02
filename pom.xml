@@ -15,13 +15,62 @@
 	<description>langchain4j learning path project for Spring Boot</description>
 	<modules>
 		<module>_01-first-encounter-langchain4j</module>
+		<module>_02-hello-world</module>
 	</modules>
 	<packaging>pom</packaging>
 
 	<properties>
 		<java.version>21</java.version>
 		<spring-ai.version>1.1.0</spring-ai.version>
+		<langchain4j.version>1.9.1-beta17</langchain4j.version>
 	</properties>
+
+	<repositories>
+		<!-- 添加 Maven Central 仓库，确保能下载 LangChain4j -->
+		<repository>
+			<id>central</id>
+			<url>https://repo.maven.apache.org/maven2</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<!-- Spring Boot Web (为了写个接口测试) -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- LangChain4j OpenAI 整合包 -->
+		<dependency>
+			<groupId>dev.langchain4j</groupId>
+			<artifactId>langchain4j-open-ai-spring-boot-starter</artifactId>
+			<version>${langchain4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>dev.langchain4j</groupId>
+			<artifactId>langchain4j-spring-boot-starter</artifactId>
+			<version>${langchain4j.version}</version>
+		</dependency>
+		<!-- 智谱 -->
+		<dependency>
+			<groupId>dev.langchain4j</groupId>
+			<artifactId>langchain4j-community-zhipu-ai</artifactId>
+			<version>${langchain4j.version}</version>
+		</dependency>
+		<!-- ollama -->
+		<dependency>
+			<groupId>dev.langchain4j</groupId>
+			<artifactId>langchain4j-ollama</artifactId>
+			<version>1.9.1</version>
+		</dependency>
+
+	</dependencies>
 
 
 	<build>
