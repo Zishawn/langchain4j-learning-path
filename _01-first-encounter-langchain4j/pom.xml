@@ -7,10 +7,10 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>_01-hello-world</artifactId>
+    <artifactId>_01-first-encounter-langchain4j</artifactId>
     <packaging>jar</packaging>
 
-    <name>_01-hello-world</name>
+    <name>_01-first-encounter-langchain4j</name>
     <url>http://maven.apache.org</url>
 
     <properties>

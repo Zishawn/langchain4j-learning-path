@@ -14,7 +14,7 @@
 	<name>langchain4j-learning-path</name>
 	<description>langchain4j learning path project for Spring Boot</description>
 	<modules>
-		<module>_01-hello-world</module>
+		<module>_01-first-encounter-langchain4j</module>
 	</modules>
 	<packaging>pom</packaging>
 
