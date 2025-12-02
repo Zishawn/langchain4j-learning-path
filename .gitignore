@@ -29,8 +29,8 @@ Thumbs.db
 
 # ⚠️ 配置文件 (防止 Key 泄露) ⚠️
 # 忽略所有 application.properties，只保留 application.example.properties
-src/main/resources/application.properties
-src/main/resources/application.yml
+application.properties
+application.yml
 # 或者你可以约定一个本地专用的配置文件名
 *-local.properties
 .env
