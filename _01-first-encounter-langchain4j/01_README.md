@@ -18,7 +18,7 @@
 随着 ChatGPT 等大语言模型（LLM）的爆发式发展，开发者面临着一系列挑战：
 
 | 挑战 | 描述 |
-|------|------|
+|:-----|:-----|
 | **API 调用复杂** | 不同模型提供商的 API 格式各异 |
 | **上下文管理困难** | LLM 本身无状态，需要手动管理对话历史 |
 | **知识局限性** | 模型知识有截止日期，无法获取实时或私有数据 |
@@ -49,7 +49,7 @@
 ### 1.3 LangChain 的核心组件
 
 | 组件 | 作用 | 示例 |
-|------|------|------|
+|:-----|:-----|:-----|
 | **Models** | 统一的模型调用接口 | OpenAI、Claude、通义千问 |
 | **Prompts** | 提示词模板与管理 | 动态生成提示词 |
 | **Memory** | 对话记忆管理 | 记住用户之前说的话 |
@@ -104,7 +104,7 @@
 #### 选择 LangChain4j 的理由
 
 | 理由 | 说明 |
-|------|------|
+|:-----|:-----|
 | **Java 原生** | 充分利用 Java 类型安全、面向对象等特性 |
 | **Spring 友好** | 提供 Spring Boot Starter，无缝集成 |
 | **企业级支持** | 适合大型企业应用，易于维护和扩展 |
@@ -114,7 +114,7 @@
 ### 2.3 LangChain4j 项目信息
 
 | 项目信息 | 内容 |
-|----------|------|
+|:---------|:-----|
 | **开源协议** | Apache 2.0 |
 | **GitHub 地址** | https://github.com/langchain4j/langchain4j |
 | **官方文档** | https://docs.langchain4j.dev/ |
@@ -151,7 +151,7 @@
 ### 3.2 核心区别对比
 
 | 对比维度 | LangChain (Python) | LangChain4j (Java) |
-|----------|-------------------|-------------------|
+|:---------|:-------------------|:-------------------|
 | **编程语言** | Python | Java |
 | **类型系统** | 动态类型 | 静态类型，编译时检查 |
 | **API 设计** | 链式调用，装饰器模式 | 接口驱动，注解配置 |
@@ -176,6 +176,7 @@ print(response.content)
 ```
 
 #### Java LangChain4j 示例
+
 ```java
 // Java LangChain4j 风格
 ChatLanguageModel model = OpenAiChatModel.builder()
@@ -185,11 +186,11 @@ ChatLanguageModel model = OpenAiChatModel.builder()
 
 String response = model.generate("你好");
 System.out.println(response);
-
 ```
 
 ### 3.4 功能覆盖对比
-![比较图](/image/img000001.png)
+
+![比较图](../image/img000001.png)
 
 
 ## 四、LangChain4j 核心特性概览
@@ -244,8 +245,9 @@ System.out.println(response);
 │   一套代码，轻松切换不同模型提供商                            │
 └─────────────────────────────────────────────────────────────┘
 
-##### 支持的模型提供商：
-![模型提供商图](/image/img000002.png)
+##### 支持的模型提供商
+
+![模型提供商图](../image/img000002.png)
 
 
 #### 特性 2：AiServices 声明式 AI 服务
@@ -270,10 +272,11 @@ String response = assistant.chat("你好");
 ```
 
 ##### 优势：
-    ✅ 类型安全
-    ✅ 代码清晰
-    ✅ 易于测试
-    ✅ IDE 友好
+
+- ✅ 类型安全
+- ✅ 代码清晰
+- ✅ 易于测试
+- ✅ IDE 友好
 
 
 #### 特性 3：结构化输出
@@ -414,10 +417,11 @@ langchain4j/
 │   技术栈：AiServices + RAG + Memory + Tools                │
 └─────────────────────────────────────────────────────────────┘
 
-适用能力：
-    - 多轮对话记忆
-    - 知识库检索（RAG）
-    - 工单系统集成（Tools）
+**适用能力：**
+
+- 多轮对话记忆
+- 知识库检索（RAG）
+- 工单系统集成（Tools）
 
 #### 场景 2：企业知识库问答
 ┌─────────────────────────────────────────────────────────────┐
@@ -475,33 +479,37 @@ langchain4j/
 └─────────────────────────────────────────────────────────────┘
 
 ### 5.2 场景与技术映射
-![场景与技术映射图](/image/img000003.png)
+
+![场景与技术映射图](../image/img000003.png)
 
 ### 5.3 选择 LangChain4j 的判断标准
 
-✅ 适合使用 LangChain4j 的情况:
-.团队主要技术栈是 Java
-.需要与现有 Spring 应用集成
-.企业级应用，需要类型安全和可维护性
-.需要构建复杂的 AI 工作流
-.需要集成私有知识库
-.需要让 AI 调用外部工具/API
+**✅ 适合使用 LangChain4j 的情况：**
 
-❌ 可能不需要 LangChain4j 的情况:
-.只需要简单调用 LLM API（直接用 HTTP 客户端即可）
-.团队更熟悉 Python（使用 Python LangChain）
-.快速原型验证（Python 可能更快）
+- 团队主要技术栈是 Java
+- 需要与现有 Spring 应用集成
+- 企业级应用，需要类型安全和可维护性
+- 需要构建复杂的 AI 工作流
+- 需要集成私有知识库
+- 需要让 AI 调用外部工具/API
+
+**❌ 可能不需要 LangChain4j 的情况：**
+
+- 只需要简单调用 LLM API（直接用 HTTP 客户端即可）
+- 团队更熟悉 Python（使用 Python LangChain）
+- 快速原型验证（Python 可能更快）
 
 
 ## 六、官方文档导读
 
 ### 6.1 官方资源汇总
 
-资源	    地址	                                                 说明
-官方文档	https://docs.langchain4j.dev/	                     最权威的学习资料
-GitHub	https://github.com/langchain4j/langchain4j	         源码与 Issues
-示例代码	https://github.com/langchain4j/langchain4j-examples	 丰富的示例
-Discord	官网获取链接	                                         社区交流
+| 资源 | 地址 | 说明 |
+|:-----|:-----|:-----|
+| **官方文档** | https://docs.langchain4j.dev/ | 最权威的学习资料 |
+| **GitHub** | https://github.com/langchain4j/langchain4j | 源码与 Issues |
+| **示例代码** | https://github.com/langchain4j/langchain4j-examples | 丰富的示例 |
+| **Discord** | 官网获取链接 | 社区交流 |
 
 ### 6.2 文档结构导航
 ```text
@@ -556,11 +564,11 @@ docs.langchain4j.dev/
 
 ### 6.4 阅读文档的技巧
 
-1.边读边练：每个概念都配合代码实践
-2.关注示例：langchain4j-examples 仓库非常有价值
-3.查看源码：LangChain4j 源码清晰，值得阅读
-4.跟踪更新：关注 Release Notes，了解新特性
-5.参与社区：GitHub Issues 和 Discord 有很多实用讨论
+1. **边读边练**：每个概念都配合代码实践
+2. **关注示例**：langchain4j-examples 仓库非常有价值
+3. **查看源码**：LangChain4j 源码清晰，值得阅读
+4. **跟踪更新**：关注 Release Notes，了解新特性
+5. **参与社区**：GitHub Issues 和 Discord 有很多实用讨论
 
 
 ## 七、今日总结
@@ -591,35 +599,40 @@ docs.langchain4j.dev/
 ```
 
 ### 7.2 核心概念速记卡
-![核心概念速记卡图](/image/img000004.png)
+
+![核心概念速记卡图](../image/img000004.png)
 
 ## 八、课后任务
 
 ### 任务 1：阅读官方文档（30 分钟）
-访问 https://docs.langchain4j.dev/
-阅读 Introduction 页面
-浏览文档整体结构
-收藏关键页面
+
+- 访问 https://docs.langchain4j.dev/
+- 阅读 Introduction 页面
+- 浏览文档整体结构
+- 收藏关键页面
 
 ### 任务 2：探索 GitHub 仓库（20 分钟）
-访问 https://github.com/langchain4j/langchain4j
-阅读 README
-查看项目结构
-Star 项目以便后续关注
+
+- 访问 https://github.com/langchain4j/langchain4j
+- 阅读 README
+- 查看项目结构
+- Star 项目以便后续关注
 
 ### 任务 3：思考练习
-结合自己的工作/项目，思考 LangChain4j 可能的应用场景
-列出 2-3 个你想用 LangChain4j 实现的功能
-记录学习中遇到的问题，明天继续探索
+
+- 结合自己的工作/项目，思考 LangChain4j 可能的应用场景
+- 列出 2-3 个你想用 LangChain4j 实现的功能
+- 记录学习中遇到的问题，明天继续探索
 
 ### 任务 4：环境预检（为明天准备）
-确认 JDK 版本（建议 17+）
-确认 IDE（推荐 IntelliJ IDEA）
-确认 Maven 或 Gradle 可用
-考虑使用哪个模型提供商
+
+- 确认 JDK 版本（建议 17+）
+- 确认 IDE（推荐 IntelliJ IDEA）
+- 确认 Maven 或 Gradle 可用
+- 考虑使用哪个模型提供商
 
 
-📝 学习笔记区
+## 📝 学习笔记区
 ```text
 今日学习时间：______ 分钟
 
@@ -637,14 +650,15 @@ Star 项目以便后续关注
 明天想重点学习的内容：
 ```
 
-🔜 明日预告
-Day 2：环境搭建与第一个程序
+## 🔜 明日预告
 
-JDK 17+ 环境确认
-Maven/Gradle 依赖配置
-选择大模型提供商
-API Key 配置与安全管理
-Hello World：第一次调用大模型
+**Day 2：环境搭建与第一个程序**
+
+- JDK 17+ 环境确认
+- Maven/Gradle 依赖配置
+- 选择大模型提供商
+- API Key 配置与安全管理
+- Hello World：第一次调用大模型
 
 
-💡 提示：今天是概念入门日，重点是建立整体认知。不需要记住所有细节，后续会逐一深入学习每个模块。
+> 💡 **提示**：今天是概念入门日，重点是建立整体认知。不需要记住所有细节，后续会逐一深入学习每个模块。
